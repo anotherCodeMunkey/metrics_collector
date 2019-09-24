@@ -23,7 +23,7 @@ type batch struct {
 func (b *batch) set(data string) {
 	b.Lock()
 	defer b.Unlock()
-	b.data += "\n" + data
+	b.data += data + "\n"
 }
 
 // RequestHandler handler from metrics

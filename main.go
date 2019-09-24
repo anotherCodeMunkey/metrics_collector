@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-func init() {
+func initConfig() {
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath("./")
@@ -19,6 +19,7 @@ func init() {
 }
 
 func main() {
+	initConfig()
 	go core.WriteManager()
 	http.HandleFunc("/collect", core.RequestHandler)
 	log.Printf("Server Start")
