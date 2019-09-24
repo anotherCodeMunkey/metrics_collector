@@ -1,7 +1,9 @@
 Метрики приходят методом POST, тело запроса должно выглядеть примерно так:
-{
-    "payload_data": "v=1&tid=UA-XXXXX-Y&cid=555&t=pageview&dp=%2Fhome"
-}
+
+	{
+   		"payload_data": "v=1&tid=UA-XXXXX-Y&cid=555&t=pageview&dp=%2Fhome"
+	}
+	
 Ключи v, tid, cid, t - обязательны, все остальные данные могут быть любыми.
 
 Необходимо реализовать сервис на Golang для сбора пользовательских метрик метрик (очень простой аналог Google Analytics (Measurement Protocol)).
